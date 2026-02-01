@@ -8,11 +8,17 @@ function App() {
   return (
     <>
     <header>
-      
+      <a>BAKARETSU</a>
     </header>
     <nav>
       <a href = "">
-        Home
+        HOME
+      </a>
+      <a href = "">
+        ARCHIVE
+      </a>
+      <a href = "">
+        ABOUT
       </a>
     </nav>
     <div class = "comics-container">
