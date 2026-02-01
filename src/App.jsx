@@ -7,10 +7,22 @@ function App() {
 
   return (
     <>
-    <img src = "/underconstruction.png" style = {{width:"25%;"}} class = "under-construction-img" />
-      {/* {comicsInfo.map(comic => {
-        return (<img key = {comic.id} src = {`/comics/${comic.name}`}/>)
-      })} */}
+    <header>
+      
+    </header>
+    <nav>
+      <a href = "">
+        Home
+      </a>
+    </nav>
+    <div class = "comics-container">
+      {/* <img src = "/underconstruction.png" style = {{width:"25%;"}} class = "under-construction-img" /> */}
+        {comicsInfo.map(comic => {
+          if(comic.id > 20){
+            return (<img key = {comic.id} src = {`/comics/${comic.name}`}/>)
+          }
+        })}
+    </div>
     </>
   )
 }

@@ -1,16 +1,24 @@
+html{
+  background-color: #F9F4DF;
+}
 .under-construction-img{
     width:10%;
 }
-
-body{
-    height:90vh;
+img{
+  display:block;
+  margin:auto;
+/* width:50rem; */
+max-width:100%;
 }
-
+body{
+  padding:0;
+  margin:0;
+}
 #root{
-    height:90vh;
-    display:flex;
+    /* height:90vh; */
+    /* display:flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
 @media (max-width: 1250px) {
@@ -22,5 +30,26 @@ body{
 @media (max-width: 600px) {
     .under-construction-img{
         width:40%;
+    }
+}
+.comics-container{
+  margin:auto;
+  width:40vw;
+}
+header{
+  background-image: url("public/header.png");
+  height:15rem;
+  background-size: 80vw;
+}
+
+nav{
+  
+}
+@media (max-width: 1000px) {
+    header{
+      height:10rem;
+    }
+    .comics-container{
+      width:90%;
     }
 }
