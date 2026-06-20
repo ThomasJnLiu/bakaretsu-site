@@ -8,6 +8,7 @@ function App() {
   return (
     <>
     <header>
+      <img class = "header-img" src = "/bakaretsu.png"/>
       <a>BAKARETSU</a>
     </header>
     <nav>
@@ -24,9 +25,7 @@ function App() {
     <div class = "comics-container">
       {/* <img src = "/underconstruction.png" style = {{width:"25%;"}} class = "under-construction-img" /> */}
         {comicsInfo.map(comic => {
-          if(comic.id > 20){
-            return (<img key = {comic.id} src = {`/comics/${comic.name}`}/>)
-          }
+            return (<img key = {comic.id} src = {`/comics/${comic.name}`}/>) 
         })}
     </div>
     </>
