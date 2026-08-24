@@ -1,33 +1,52 @@
 import { useState } from 'react'
 import comicsInfo from "../public/comics/meta.json"
 import "./App.css"
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import HomePage from "./pages/HomePage";
+import Archive from "./pages/Archive"
+import RootLayout from './pages/Root';
+import ComicPage from './pages/ComicPage';
+import ErrorPage from './pages/ErrorPage';
+
+const router = createBrowserRouter([
+  {
+    path:'/',
+    element: <RootLayout/>,
+    errorElement: <ErrorPage/>,
+    children :[  
+      { path: '/', element: <HomePage/>},
+      { path: '/archive', element: <Archive/>},
+      { path: "/comic/:comicId", element: <ComicPage/>}
+    ]
+  }
+])
 
 function App() {
   console.log(import.meta.url)
 
   return (
     <>
-    <header>
+      <RouterProvider router = {router} />
+    {/* <header>
       <img class = "header-img" src = "/bakaretsu.png"/>
       <a>BAKARETSU</a>
     </header>
     <nav>
-      <a href = "">
+      <a href = "./home">
         HOME
       </a>
-      <a href = "">
+      <a href = "./archive">
         ARCHIVE
       </a>
-      <a href = "">
+      <a href = "./about">
         ABOUT
       </a>
     </nav>
     <div class = "comics-container">
-      {/* <img src = "/underconstruction.png" style = {{width:"25%;"}} class = "under-construction-img" /> */}
         {comicsInfo.map(comic => {
             return (<img key = {comic.id} src = {`/comics/${comic.name}`}/>) 
         })}
-    </div>
+    </div> */}
     </>
   )
 }
