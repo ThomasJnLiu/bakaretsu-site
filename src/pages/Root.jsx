@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function RootLayout(){
     return <>
         <header>
-      <img class = "header-img" src = "/bakaretsu.png"/>
+      <img className = "header-img" src = "/bakaretsu.png"/>
       <a>BAKARETSU</a>
     </header>
     <nav>

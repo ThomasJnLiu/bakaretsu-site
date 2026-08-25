@@ -9,7 +9,8 @@ function ComicPage(){
         throw new Error("Comic Not Found", { status: 404 });
     }
     return <>
-    <h1>{params.comicId}</h1></>
+    <h1>{params.comicId}</h1>
+    <img src = {`/comics/${params.comicId}`}/></>
 }
 
-export default ComicPage
+export default ComicPage    
