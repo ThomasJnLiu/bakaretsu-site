@@ -7,7 +7,10 @@ function Archive () {
     <h1>Archive</h1>
         <ul className = "archive-list">
             {comicsInfo.map(comic => {
-                return (<Link key = {comic.id} to = {`/comic/${comic.urlPath}`}>{comic.title}</Link>) 
+                console.log(comic)
+                let thumbnailPath = "thumb_" + comic.filePath;
+
+                return (<div key = {comic.id}><img src = {`/comics/thumbnails/${thumbnailPath}`}/><Link  to = {`/comic/${comic.urlPath}`}>{comic.title}</Link></div>) 
             })}
         </ul>
     </>)

@@ -16,7 +16,7 @@ function ComicPage(){
     return <>
         <h1>{comicDetail.title}</h1>
         <div className = "comics-container">
-            <img src = {`/comics/${comicDetail.imagePath}`}/>
+            <img src = {`/comics/${comicDetail.filePath}`}/>
         </div>
     </>
 }
