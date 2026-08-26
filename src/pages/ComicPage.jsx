@@ -1,16 +1,24 @@
 import { useParams } from "react-router-dom"
+import comicsInfo from "../../src/meta.json"
 
 function ComicPage(){
-    const params = useParams();
+    const {comicId} = useParams();
 
-    console.log(params.comicId)
+    const comicDetail = comicsInfo.find(comic => comic.urlPath === comicId) 
+    console.log(comicDetail);
 
-    if (params.comicId == "test"){
+    // generate filepath based off id
+    // let comicFilePath = params.comicId.replace("-", "_") + ".png";
+
+    if (comicId == "test"){
         throw new Error("Comic Not Found", { status: 404 });
     }
     return <>
-    <h1>{params.comicId}</h1>
-    <img src = {`/comics/${params.comicId}`}/></>
+        <h1>{comicDetail.title}</h1>
+        <div className = "comics-container">
+            <img src = {`/comics/${comicDetail.imagePath}`}/>
+        </div>
+    </>
 }
 
 export default ComicPage    

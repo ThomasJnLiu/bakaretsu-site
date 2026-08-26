@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import comicsInfo from "../../public/comics/meta.json"
+import comicsInfo from "../../src/meta.json"
 // import "./App.css"
 import { Link } from 'react-router-dom'
 

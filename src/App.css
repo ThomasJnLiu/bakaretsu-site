@@ -104,3 +104,7 @@ header a{
       font-size:2rem;
     }
 }
+
+.archive-list a{
+  display:block;
+}

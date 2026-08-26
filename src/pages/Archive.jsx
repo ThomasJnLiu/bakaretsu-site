@@ -1,5 +1,5 @@
 // Purpose: Take the list of all comics, generate a link for each
-import comicsInfo from "../../public/comics/meta.json"
+import comicsInfo from "../../src/meta.json"
 import { Link } from "react-router-dom"
 
 function Archive () {
@@ -7,8 +7,7 @@ function Archive () {
     <h1>Archive</h1>
         <ul className = "archive-list">
             {comicsInfo.map(comic => {
-                let comicNameClean = comic.name.slice(0,-4)
-                return (<Link key = {comic.id} to = {`/comic/${comicNameClean}`}>{comic.name}</Link>) 
+                return (<Link key = {comic.id} to = {`/comic/${comic.urlPath}`}>{comic.title}</Link>) 
             })}
         </ul>
     </>)

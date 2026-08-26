@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import comicsInfo from "../public/comics/meta.json"
+import comicsInfo from "../src/meta.json"
 import "./App.css"
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import HomePage from "./pages/HomePage";
