@@ -1,33 +1,31 @@
-import { useState } from 'react'
-import comicsInfo from "../src/meta.json"
-import "./App.css"
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import HomePage from "./pages/HomePage";
-import Archive from "./pages/Archive"
+import './App.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import Archive from './pages/Archive';
 import RootLayout from './pages/Root';
 import ComicPage from './pages/ComicPage';
 import ErrorPage from './pages/ErrorPage';
 
 const router = createBrowserRouter([
-  {
-    path:'/',
-    element: <RootLayout/>,
-    errorElement: <ErrorPage/>,
-    children :[  
-      { path: '/', element: <HomePage/>},
-      { path: '/archive', element: <Archive/>},
-      { path: "/comic/:comicId", element: <ComicPage/>}
-    ]
-  }
-])
+	{
+		path: '/',
+		element: <RootLayout />,
+		errorElement: <ErrorPage />,
+		children: [
+			{ path: '/', element: <HomePage /> },
+			{ path: '/archive', element: <Archive /> },
+			{ path: '/comic/:comicId', element: <ComicPage /> },
+		],
+	},
+]);
 
 function App() {
-  console.log(import.meta.url)
+	console.log(import.meta.url);
 
-  return (
-    <>
-      <RouterProvider router = {router} />
-    {/* <header>
+	return (
+		<>
+			<RouterProvider router={router} />
+			{/* <header>
       <img class = "header-img" src = "/bakaretsu.png"/>
       <a>BAKARETSU</a>
     </header>
@@ -47,8 +45,8 @@ function App() {
             return (<img key = {comic.id} src = {`/comics/${comic.name}`}/>) 
         })}
     </div> */}
-    </>
-  )
+		</>
+	);
 }
 
-export default App
+export default App;

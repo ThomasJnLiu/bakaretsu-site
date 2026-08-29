@@ -9,7 +9,7 @@ html{
 .comics-container img{
   display:block;
   margin:auto;
-/* width:50rem; */
+  /* width:50rem; */
   max-width:100%;
 }
 body{

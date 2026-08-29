@@ -1,5 +1,5 @@
-function ErrorPage () {
-    return <>Page not found</>
+function ErrorPage() {
+	return <>Page not found</>;
 }
 
-export default ErrorPage
+export default ErrorPage;
